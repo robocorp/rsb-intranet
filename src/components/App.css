@@ -1,0 +1,11 @@
+footer {
+  padding: 1em 0 1em 0;
+}
+
+#logout {
+  float: right;
+}
+
+.error {
+  text-align: center;
+}
