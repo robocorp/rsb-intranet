@@ -9,3 +9,7 @@ footer {
 .error {
   text-align: center;
 }
+
+table {
+  margin-top: 1em;
+}

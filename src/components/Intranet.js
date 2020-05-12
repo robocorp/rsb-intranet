@@ -1,7 +1,8 @@
 import React from 'react'
+import SalesForm from './SalesForm'
 
 function Intranet() {
-  return <p>Welcome!</p>
+  return <SalesForm />
 }
 
 export default Intranet

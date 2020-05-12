@@ -24,7 +24,6 @@ function AuthProvider({children}) {
       window.localStorage.setItem(rbsUserKey, JSON.stringify(user))
       setState({status: 'success', error: null, user})
     } catch (error) {
-      console.log(error)
       setState({status: 'error', error: error.message, user: null})
     }
   }
@@ -34,7 +33,6 @@ function AuthProvider({children}) {
       await destabilize().then(() => window.localStorage.removeItem(rbsUserKey))
       setState({status: 'success', error: null, user: null})
     } catch (error) {
-      console.log(error)
       setState({status: 'error', error: error.message, user: null})
     }
   }
