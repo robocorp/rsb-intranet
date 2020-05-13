@@ -29,7 +29,7 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
 
     return (
       <>
-        <table className="table table-dark table-striped">
+        <table id="sales-results" className="table table-dark table-striped">
           <thead>
             <tr>
               <th scope="col">Name</th>

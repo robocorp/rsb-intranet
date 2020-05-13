@@ -46,12 +46,13 @@ function SalesForm() {
     <div className="container">
       <div className="row">
         <div className="col-sm">
-          <form onSubmit={handleSubmit}>
+          <form id="sales-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="firstname">First name</label>
               <input
                 type="text"
                 id="firstname"
+                name="firstname"
                 required
                 className="form-control"
               />
@@ -61,6 +62,7 @@ function SalesForm() {
               <input
                 type="text"
                 id="lastname"
+                name="lastname"
                 required
                 className="form-control"
               />
@@ -71,6 +73,7 @@ function SalesForm() {
               <input
                 type="number"
                 id="salesresult"
+                name="salesresult"
                 required
                 className="form-control"
               />
