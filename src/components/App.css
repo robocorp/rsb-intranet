@@ -1,4 +1,5 @@
 header {
+  color: #918a91;
   margin-bottom: 2em;
 }
 
@@ -7,6 +8,7 @@ header p {
 }
 
 footer {
+  color: #918a91;
   margin: 2em 0 1em 0;
 }
 
@@ -20,4 +22,8 @@ footer {
 
 table {
   margin-top: 2em;
+}
+
+.form-control {
+  background-color: #eae8e4;
 }
