@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e88641ed228e2b6875079ce2b5a7c6c4",
+    "revision": "a1192becd0e3158053a6a11af5af0bc1",
     "url": "/rsb-intranet/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rsb-intranet/static/css/2.89f067aa.chunk.css"
   },
   {
-    "revision": "532f483450054ebff5a9",
+    "revision": "c79b80f4828194e5be8e",
     "url": "/rsb-intranet/static/css/main.cffe860f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rsb-intranet/static/js/2.06775a39.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "532f483450054ebff5a9",
-    "url": "/rsb-intranet/static/js/main.6697306a.chunk.js"
+    "revision": "c79b80f4828194e5be8e",
+    "url": "/rsb-intranet/static/js/main.a570191b.chunk.js"
   },
   {
     "revision": "c2ee83df18c86e0ac6dd",
