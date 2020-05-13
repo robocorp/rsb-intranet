@@ -14,11 +14,11 @@ function Home() {
 function App() {
   return (
     <AuthProvider>
-      <div className="container">
-        <Header />
+      <Header />
+      <div className="container main-container">
         <Home />
-        <Footer />
       </div>
+      <Footer />
     </AuthProvider>
   )
 }
