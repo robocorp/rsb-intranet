@@ -12,6 +12,7 @@ function SalesEntries({entries}) {
           </td>
           <td>${entry.salesTarget}</td>
           <td>${entry.salesResult}</td>
+          <td>${entry.salesResult - entry.salesTarget}</td>
         </tr>
       )
     })
@@ -23,6 +24,7 @@ function SalesEntries({entries}) {
             <th scope="col">Name</th>
             <th scope="col">Target</th>
             <th scope="col">Result</th>
+            <th scope="col">Difference</th>
           </tr>
         </thead>
         <tbody>{entryElements}</tbody>
