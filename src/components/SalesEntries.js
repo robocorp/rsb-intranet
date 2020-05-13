@@ -1,4 +1,5 @@
 import React from 'react'
+import formatNumber from '../utils/format'
 
 function SalesEntries({entries}) {
   let entryElements = null
@@ -10,9 +11,9 @@ function SalesEntries({entries}) {
           <td>
             {entry.firstName} {entry.lastName}
           </td>
-          <td>${entry.salesTarget}</td>
-          <td>${entry.salesResult}</td>
-          <td>${entry.salesResult - entry.salesTarget}</td>
+          <td>${formatNumber(entry.salesTarget)}</td>
+          <td>${formatNumber(entry.salesResult)}</td>
+          <td>${formatNumber(entry.salesResult - entry.salesTarget)}</td>
         </tr>
       )
     })
