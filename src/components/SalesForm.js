@@ -83,7 +83,7 @@ function SalesForm() {
           </form>
         </div>
         <div class="col-sm">
-          <SalesEntries entries={salesEntries} />
+          <SalesEntries salesEntries={salesEntries} />
         </div>
       </div>
     </div>
