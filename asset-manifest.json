@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/rsb-intranet/static/css/main.cffe860f.chunk.css",
-    "main.js": "/rsb-intranet/static/js/main.5a8c3089.chunk.js",
-    "main.js.map": "/rsb-intranet/static/js/main.5a8c3089.chunk.js.map",
-    "runtime-main.js": "/rsb-intranet/static/js/runtime-main.181e3a41.js",
-    "runtime-main.js.map": "/rsb-intranet/static/js/runtime-main.181e3a41.js.map",
-    "static/css/2.89f067aa.chunk.css": "/rsb-intranet/static/css/2.89f067aa.chunk.css",
-    "static/js/2.06775a39.chunk.js": "/rsb-intranet/static/js/2.06775a39.chunk.js",
-    "static/js/2.06775a39.chunk.js.map": "/rsb-intranet/static/js/2.06775a39.chunk.js.map",
-    "index.html": "/rsb-intranet/index.html",
-    "precache-manifest.833868c64140ab3689b8202b36e26d44.js": "/rsb-intranet/precache-manifest.833868c64140ab3689b8202b36e26d44.js",
-    "service-worker.js": "/rsb-intranet/service-worker.js",
-    "static/css/2.89f067aa.chunk.css.map": "/rsb-intranet/static/css/2.89f067aa.chunk.css.map",
-    "static/css/main.cffe860f.chunk.css.map": "/rsb-intranet/static/css/main.cffe860f.chunk.css.map",
-    "static/js/2.06775a39.chunk.js.LICENSE.txt": "/rsb-intranet/static/js/2.06775a39.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/rsb-intranet/static/media/robots-background.b02123ad.png"
+    "main.css": "/static/css/main.9c269298.chunk.css",
+    "main.js": "/static/js/main.be54a5db.chunk.js",
+    "main.js.map": "/static/js/main.be54a5db.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7c8d7d07.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7c8d7d07.js.map",
+    "static/css/2.89f067aa.chunk.css": "/static/css/2.89f067aa.chunk.css",
+    "static/js/2.06775a39.chunk.js": "/static/js/2.06775a39.chunk.js",
+    "static/js/2.06775a39.chunk.js.map": "/static/js/2.06775a39.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.11cd77007196db352ed688ca1df695cc.js": "/precache-manifest.11cd77007196db352ed688ca1df695cc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.89f067aa.chunk.css.map": "/static/css/2.89f067aa.chunk.css.map",
+    "static/css/main.9c269298.chunk.css.map": "/static/css/main.9c269298.chunk.css.map",
+    "static/js/2.06775a39.chunk.js.LICENSE.txt": "/static/js/2.06775a39.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/robots-background.b02123ad.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.181e3a41.js",
+    "static/js/runtime-main.7c8d7d07.js",
     "static/css/2.89f067aa.chunk.css",
     "static/js/2.06775a39.chunk.js",
-    "static/css/main.cffe860f.chunk.css",
-    "static/js/main.5a8c3089.chunk.js"
+    "static/css/main.9c269298.chunk.css",
+    "static/js/main.be54a5db.chunk.js"
   ]
 }
