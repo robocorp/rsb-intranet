@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7512eb3adedd64efc2f3aa41081f191e",
+    "revision": "445c2637d2ef65b5e78efd4bcc2dfbf6",
     "url": "/rsb-intranet/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rsb-intranet/static/css/2.89f067aa.chunk.css"
   },
   {
-    "revision": "4fc108d37f4d741d3af9",
-    "url": "/rsb-intranet/static/css/main.8713ee52.chunk.css"
+    "revision": "b141fac4f1de14d1294a",
+    "url": "/rsb-intranet/static/css/main.cb486514.chunk.css"
   },
   {
     "revision": "d15be43a453cce2f07f2",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rsb-intranet/static/js/2.5ac4d7a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4fc108d37f4d741d3af9",
-    "url": "/rsb-intranet/static/js/main.667a9e19.chunk.js"
+    "revision": "b141fac4f1de14d1294a",
+    "url": "/rsb-intranet/static/js/main.b703898a.chunk.js"
   },
   {
     "revision": "c2ee83df18c86e0ac6dd",

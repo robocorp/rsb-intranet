@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css","App.css"],"names":[],"mappings":"AAAA,KACE,WACF,CCFA,OACE,aACF,CAEA,QACE,WACF,CAEA,OACE,iBACF,CAEA,MACE,cACF","file":"main.8713ee52.chunk.css","sourcesContent":["body {\n  padding: 1em;\n}\n","footer {\n  padding: 1em 0 1em 0;\n}\n\n#logout {\n  float: right;\n}\n\n.error {\n  text-align: center;\n}\n\ntable {\n  margin-top: 1em;\n}\n"]}
