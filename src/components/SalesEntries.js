@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import formatNumber from '../utils/format'
 
-function SalesEntries({salesEntries}) {
+function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
   const [showPerformance, setShowPerformance] = useState(false)
 
   const handleSubmit = event => setShowPerformance(!showPerformance)
@@ -44,6 +44,8 @@ function SalesEntries({salesEntries}) {
           handleSubmit={handleSubmit}
           showPerformance={showPerformance}
         />
+        &nbsp;
+        <DeleteAllSalesEntriesButton onClick={onDeleteAllSalesEntries} />
       </>
     )
   }
@@ -87,8 +89,16 @@ function ViewPerformanceButton({handleSubmit, showPerformance}) {
   const label = showPerformance ? 'Hide performance' : 'Show performance'
 
   return (
-    <button onClick={handleSubmit} type="submit" className="btn btn-primary">
+    <button onClick={handleSubmit} type="submit" className="btn btn-secondary">
       {label}
+    </button>
+  )
+}
+
+function DeleteAllSalesEntriesButton({onClick}) {
+  return (
+    <button onClick={onClick} type="submit" className="btn btn-secondary">
+      Delete all sales entries
     </button>
   )
 }

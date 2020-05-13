@@ -36,6 +36,11 @@ function SalesForm() {
     setSalesEntries(salesEntries)
   }
 
+  const onDeleteAllSalesEntries = event => {
+    window.localStorage.removeItem(rsbSalesEntriesKey)
+    setSalesEntries(getSalesEntriesFromLocalStorage())
+  }
+
   return (
     <div className="container">
       <div className="row">
@@ -83,7 +88,10 @@ function SalesForm() {
           </form>
         </div>
         <div class="col-sm">
-          <SalesEntries salesEntries={salesEntries} />
+          <SalesEntries
+            salesEntries={salesEntries}
+            onDeleteAllSalesEntries={onDeleteAllSalesEntries}
+          />
         </div>
       </div>
     </div>
