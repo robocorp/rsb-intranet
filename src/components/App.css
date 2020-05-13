@@ -27,3 +27,8 @@ table {
 .form-control {
   background-color: #eae8e4;
 }
+
+.performance {
+  color: #0dcfc7;
+  font-style: italic;
+}
