@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import SalesEntries from './SalesEntries'
 
-const rbsSalesEntriesKey = 'rbsSalesEntries'
+const rsbSalesEntriesKey = 'rsbSalesEntries'
 
 const getSalesEntriesFromLocalStorage = () => {
-  const salesEntries = window.localStorage.getItem(rbsSalesEntriesKey)
+  const salesEntries = window.localStorage.getItem(rsbSalesEntriesKey)
   return salesEntries ? JSON.parse(salesEntries) : []
 }
 
@@ -29,7 +29,7 @@ function SalesForm() {
     })
 
     window.localStorage.setItem(
-      rbsSalesEntriesKey,
+      rsbSalesEntriesKey,
       JSON.stringify(salesEntries),
     )
 

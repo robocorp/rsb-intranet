@@ -5,9 +5,9 @@ import destabilize from '../utils/destabilize'
 const getUser = username =>
   destabilize().then(() => ({username: username.toString()}))
 
-const rbsUserKey = 'rbsUser'
+const rsbUserKey = 'rsbUser'
 
-const getUserFromLocalStorage = () => window.localStorage.getItem(rbsUserKey)
+const getUserFromLocalStorage = () => window.localStorage.getItem(rsbUserKey)
 
 const AuthContext = React.createContext()
 
@@ -21,7 +21,7 @@ function AuthProvider({children}) {
   const login = async (username, password) => {
     try {
       const user = await getUser(username)
-      window.localStorage.setItem(rbsUserKey, JSON.stringify(user))
+      window.localStorage.setItem(rsbUserKey, JSON.stringify(user))
       setState({status: 'success', error: null, user})
     } catch (error) {
       setState({status: 'error', error: error.message, user: null})
@@ -30,7 +30,7 @@ function AuthProvider({children}) {
 
   const logout = async () => {
     try {
-      await destabilize().then(() => window.localStorage.removeItem(rbsUserKey))
+      await destabilize().then(() => window.localStorage.removeItem(rsbUserKey))
       setState({status: 'success', error: null, user: null})
     } catch (error) {
       setState({status: 'error', error: error.message, user: null})
