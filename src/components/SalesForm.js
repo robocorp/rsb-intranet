@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SalesEntries from './SalesEntries'
+import formatNumber from '../utils/format'
 
 const rsbSalesEntriesKey = 'rsbSalesEntries'
 
@@ -44,7 +45,7 @@ function SalesForm() {
   return (
     <div className="container">
       <div className="row">
-        <div class="col-sm">
+        <div className="col-sm">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="firstname">First name</label>
@@ -64,15 +65,7 @@ function SalesForm() {
                 className="form-control"
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="salestarget">Sales target ($)</label>
-              <input
-                type="number"
-                id="salestarget"
-                required
-                className="form-control"
-              />
-            </div>
+            <SalesTargetSelect />
             <div className="form-group">
               <label htmlFor="salesresult">Sales result ($)</label>
               <input
@@ -87,13 +80,36 @@ function SalesForm() {
             </button>
           </form>
         </div>
-        <div class="col-sm">
+        <div className="col-sm">
           <SalesEntries
             salesEntries={salesEntries}
             onDeleteAllSalesEntries={onDeleteAllSalesEntries}
           />
         </div>
       </div>
+    </div>
+  )
+}
+
+function SalesTargetSelect() {
+  const options = []
+  const step = 5000
+  const max = 100000
+
+  for (let value = step; value <= max; value += step) {
+    options.push(
+      <option value={value} key={value}>
+        ${formatNumber(value)}
+      </option>,
+    )
+  }
+
+  return (
+    <div className="form-group">
+      <label htmlFor="salestarget">Sales target ($)</label>
+      <select id="salestarget" required className="custom-select">
+        {options}
+      </select>
     </div>
   )
 }
