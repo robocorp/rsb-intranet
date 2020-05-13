@@ -17,7 +17,7 @@ function SalesEntries({entries}) {
     })
 
     return (
-      <table className="table">
+      <table className="table table-dark">
         <thead>
           <tr>
             <th scope="col">Name</th>

@@ -37,40 +37,56 @@ function SalesForm() {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="firstname">First name</label>
-          <input type="text" id="firstname" required className="form-control" />
+    <div className="container">
+      <div className="row">
+        <div class="col-sm">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="firstname">First name</label>
+              <input
+                type="text"
+                id="firstname"
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="lastname">Last name</label>
+              <input
+                type="text"
+                id="lastname"
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="salestarget">Sales target ($)</label>
+              <input
+                type="number"
+                id="salestarget"
+                required
+                className="form-control"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="salesresult">Sales result ($)</label>
+              <input
+                type="number"
+                id="salesresult"
+                required
+                className="form-control"
+              />
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="lastname">Last name</label>
-          <input type="text" id="lastname" required className="form-control" />
+        <div class="col-sm">
+          <SalesEntries entries={salesEntries} />
         </div>
-        <div className="form-group">
-          <label htmlFor="salestarget">Sales target ($)</label>
-          <input
-            type="number"
-            id="salestarget"
-            required
-            className="form-control"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="salesresult">Sales result ($)</label>
-          <input
-            type="number"
-            id="salesresult"
-            required
-            className="form-control"
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-      <SalesEntries entries={salesEntries} />
-    </>
+      </div>
+    </div>
   )
 }
 
