@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Armata&display=swap');
+
+h1 {
+  font-size: 35px;
+}
+
 header {
   color: #918a91;
-  margin-bottom: 2em;
+  padding: 2em 0;
 }
 
 header p {
@@ -26,4 +33,47 @@ table {
 
 .form-control {
   background-color: #eae8e4;
+}
+
+body {
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Armata', sans-serif;
+}
+
+.header-container {
+  background-color: #eae8e4;
+  border-bottom: 10px solid #7850fa;
+  background-image: url(../imgs/robots-background.png);
+  background-size: 500px;
+  color: black;
+  margin-bottom: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Special Elite', cursive;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #7850fa;
+  border-color: #7850fa;
+  text-transform: uppercase;
+}
+
+footer {
+  color: black;
+  text-align: center;
+  font-size: 0.8em;
+  background-color: #eae8e4;
+  border-top: 5px solid #7850fa;
+  background-image: url(../imgs/robots-background.png);
+  background-size: 500px;
+  margin-bottom: 0;
+  padding: 5px;
 }
