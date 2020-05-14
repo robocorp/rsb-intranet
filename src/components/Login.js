@@ -37,8 +37,8 @@ function Login() {
             </div>
             <p>
               <small id="passwordHelpBlock" className="form-text text-muted">
-                Psst... you can login using "maria" as username and
-                "thoushallnotpass" as password. But don't tell anyone!
+                Psst... You can login using "maria" as username and
+                "thoushallnotpass" as password. Don't tell anyone!
               </small>
             </p>
             <button type="submit" className="btn btn-primary">

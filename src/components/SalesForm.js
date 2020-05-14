@@ -16,8 +16,6 @@ function SalesForm() {
   )
 
   const handleSubmit = event => {
-    event.preventDefault()
-
     const {
       firstname,
       lastname,
