@@ -12,6 +12,7 @@ function Login() {
 
   return (
     <div className="container">
+      <LoginFailed />
       <div className="row">
         <div className="col-sm">
           <form onSubmit={event => handleSubmit(event, login)}>
@@ -42,6 +43,20 @@ function Login() {
       </div>
     </div>
   )
+}
+
+function LoginFailed() {
+  const {status} = useAuthState()
+
+  if (status === 'login-failed') {
+    return (
+      <div className="alert alert-warning" role="alert">
+        Invalid username or password.
+      </div>
+    )
+  }
+
+  return null
 }
 
 export default Login

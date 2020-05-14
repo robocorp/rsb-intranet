@@ -2,12 +2,17 @@ import React from 'react'
 import Error from '../components/Error'
 import destabilize from '../utils/destabilize'
 
-const getUser = username =>
-  destabilize().then(() => ({username: username.toString()}))
-
 const rsbUserKey = 'rsbUser'
 
 const getUserFromLocalStorage = () => window.localStorage.getItem(rsbUserKey)
+
+const getUser = (username, password) => {
+  return destabilize().then(() => {
+    return username === 'maria' && password === 'thoushallnotpass'
+      ? {username: username.toString()}
+      : null
+  })
+}
 
 const AuthContext = React.createContext()
 
@@ -20,9 +25,18 @@ function AuthProvider({children}) {
 
   const login = async (username, password) => {
     try {
-      const user = await getUser(username)
-      window.localStorage.setItem(rsbUserKey, JSON.stringify(user))
-      setState({status: 'success', error: null, user})
+      const user = await getUser(username, password)
+
+      if (!user) {
+        setState({
+          status: 'login-failed',
+          error: 'Invalid username or password.',
+          user: null,
+        })
+      } else {
+        window.localStorage.setItem(rsbUserKey, JSON.stringify(user))
+        setState({status: 'success', error: null, user})
+      }
     } catch (error) {
       setState({status: 'error', error: error.message, user: null})
     }
