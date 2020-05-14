@@ -39,6 +39,8 @@ function SalesForm() {
           salesResult: salesresult.value,
         }),
       )
+
+      document.querySelector('#sales-form').reset()
     })
   }
 
