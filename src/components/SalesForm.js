@@ -16,6 +16,8 @@ function SalesForm() {
   )
 
   const handleSubmit = event => {
+    event.preventDefault()
+
     const {
       firstname,
       lastname,
@@ -23,19 +25,21 @@ function SalesForm() {
       salesresult,
     } = event.target.elements
 
-    salesEntries.push({
-      firstName: firstname.value,
-      lastName: lastname.value,
-      salesTarget: salestarget.value,
-      salesResult: salesresult.value,
+    return destabilize().then(() => {
+      window.localStorage.setItem(
+        rsbSalesEntriesKey,
+        JSON.stringify(salesEntries),
+      )
+
+      setSalesEntries(
+        salesEntries.concat({
+          firstName: firstname.value,
+          lastName: lastname.value,
+          salesTarget: salestarget.value,
+          salesResult: salesresult.value,
+        }),
+      )
     })
-
-    window.localStorage.setItem(
-      rsbSalesEntriesKey,
-      JSON.stringify(salesEntries),
-    )
-
-    setSalesEntries(salesEntries)
   }
 
   const onDeleteAllSalesEntries = event => {
