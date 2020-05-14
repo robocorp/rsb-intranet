@@ -63,7 +63,7 @@ function Performance({salesEntry}) {
       ? 'Holy macaroni!'
       : ratio > 5
       ? 'Magnificent!'
-      : ratio > 1
+      : ratio >= 1
       ? 'A positive result. Well done!'
       : ratio > 0.75
       ? 'Hmm. Did not quite make it.'
