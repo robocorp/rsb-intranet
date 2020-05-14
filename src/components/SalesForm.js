@@ -23,23 +23,19 @@ function SalesForm() {
       salesresult,
     } = event.target.elements
 
-    return destabilize().then(() => {
-      window.localStorage.setItem(
-        rsbSalesEntriesKey,
-        JSON.stringify(salesEntries),
-      )
-
-      setSalesEntries(
-        salesEntries.concat({
-          firstName: firstname.value,
-          lastName: lastname.value,
-          salesTarget: salestarget.value,
-          salesResult: salesresult.value,
-        }),
-      )
-
-      document.querySelector('#sales-form').reset()
+    salesEntries.push({
+      firstName: firstname.value,
+      lastName: lastname.value,
+      salesTarget: salestarget.value,
+      salesResult: salesresult.value,
     })
+
+    window.localStorage.setItem(
+      rsbSalesEntriesKey,
+      JSON.stringify(salesEntries),
+    )
+
+    setSalesEntries(salesEntries)
   }
 
   const onDeleteAllSalesEntries = event => {
