@@ -32,10 +32,18 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
         <table id="sales-results" className="table table-dark table-striped">
           <thead>
             <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Target</th>
-              <th scope="col">Result</th>
-              <th scope="col">Difference</th>
+              <th width="250" scope="col">
+                Name
+              </th>
+              <th width="250" scope="col">
+                Target
+              </th>
+              <th width="250" scope="col">
+                Result
+              </th>
+              <th width="250" scope="col">
+                Difference
+              </th>
             </tr>
           </thead>
           <tbody>{salesEntryElements}</tbody>
