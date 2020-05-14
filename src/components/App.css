@@ -52,6 +52,10 @@ table {
   background-color: #eae8e4;
 }
 
+.main-container {
+  margin-bottom: 25px;
+}
+
 .header-container {
   background-color: #eae8e4;
   border-bottom: 10px solid #7850fa;
