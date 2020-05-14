@@ -5,7 +5,15 @@ const Header = () => (
   <header className="header-container">
     <div className="container">
       <Logout />
-      <h1>🤖⚙️ RobotSpareBin Industries Inc. </h1>
+      <h1>
+        <span role="img" aria-label="emoticon robot">
+          🤖
+        </span>
+        <span role="img" aria-label="emoticon gear">
+          ⚙️
+        </span>{' '}
+        RobotSpareBin Industries Inc.{' '}
+      </h1>
       <h5>
         The leader in refurbished and dubious quality spare parts for robots,
         since 1982!
