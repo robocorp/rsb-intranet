@@ -50,12 +50,15 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
           </thead>
           <tbody>{salesEntryElements}</tbody>
         </table>
-        <ViewPerformanceButton
-          handleSubmit={handleSubmit}
-          showPerformance={showPerformance}
-        />
-        &nbsp;
-        <DeleteAllSalesEntriesButton onClick={onDeleteAllSalesEntries} />
+
+        <div className="btn-group d-flex" role="group" aria-label="Operations">
+          <ViewPerformanceButton
+            handleSubmit={handleSubmit}
+            showPerformance={showPerformance}
+          />
+          &nbsp;
+          <DeleteAllSalesEntriesButton onClick={onDeleteAllSalesEntries} />
+        </div>
       </>
     )
   }
@@ -99,7 +102,11 @@ function ViewPerformanceButton({handleSubmit, showPerformance}) {
   const label = showPerformance ? 'Hide performance' : 'Show performance'
 
   return (
-    <button onClick={handleSubmit} type="submit" className="btn btn-secondary">
+    <button
+      onClick={handleSubmit}
+      type="submit"
+      className="btn btn-info btn-secondary"
+    >
       {label}
     </button>
   )
@@ -107,7 +114,11 @@ function ViewPerformanceButton({handleSubmit, showPerformance}) {
 
 function DeleteAllSalesEntriesButton({onClick}) {
   return (
-    <button onClick={onClick} type="submit" className="btn btn-secondary">
+    <button
+      onClick={onClick}
+      type="submit"
+      className="btn btn-danger btn-secondary"
+    >
       Delete all sales entries
     </button>
   )
