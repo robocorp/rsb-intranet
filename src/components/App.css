@@ -72,3 +72,16 @@ table {
   color: #0dcfc7;
   font-style: italic;
 }
+
+.sales-summary {
+  margin-top: 2em;
+}
+
+.sales-summary > div {
+  display: flex;
+}
+
+.sales-summary span {
+  flex: auto;
+  width: 50%;
+}
