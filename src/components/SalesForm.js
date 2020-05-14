@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SalesEntries from './SalesEntries'
+import destabilize from '../utils/destabilize'
 import formatNumber from '../utils/format'
 
 const rsbSalesEntriesKey = 'rsbSalesEntries'
@@ -38,8 +39,10 @@ function SalesForm() {
   }
 
   const onDeleteAllSalesEntries = event => {
-    window.localStorage.removeItem(rsbSalesEntriesKey)
-    setSalesEntries(getSalesEntriesFromLocalStorage())
+    destabilize().then(() => {
+      window.localStorage.removeItem(rsbSalesEntriesKey)
+      setSalesEntries(getSalesEntriesFromLocalStorage())
+    })
   }
 
   return (
