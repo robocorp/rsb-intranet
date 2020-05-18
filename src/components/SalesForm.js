@@ -23,7 +23,7 @@ function SalesForm() {
       salesresult,
     } = event.target.elements
 
-    salesEntries.push({
+    salesEntries.unshift({
       firstName: firstname.value,
       lastName: lastname.value,
       salesTarget: salestarget.value,
