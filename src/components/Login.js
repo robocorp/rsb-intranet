@@ -22,6 +22,7 @@ function Login() {
               <input
                 type="text"
                 id="username"
+                name="username"
                 required
                 className="form-control"
               />
@@ -31,6 +32,7 @@ function Login() {
               <input
                 type="password"
                 id="password"
+                name="password"
                 required
                 className="form-control"
               />
