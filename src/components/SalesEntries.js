@@ -31,25 +31,27 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
     return (
       <>
         <SalesCounter salesEntries={salesEntries} />
-        <table id="sales-results" className="table table-dark table-striped">
-          <thead>
-            <tr>
-              <th width="250" scope="col">
-                Name
-              </th>
-              <th width="250" scope="col">
-                Target
-              </th>
-              <th width="250" scope="col">
-                Result
-              </th>
-              <th width="250" scope="col">
-                Difference
-              </th>
-            </tr>
-          </thead>
-          <tbody>{salesEntryElements}</tbody>
-        </table>
+        <div id="sales-results">
+          <table className="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th width="250" scope="col">
+                  Name
+                </th>
+                <th width="250" scope="col">
+                  Target
+                </th>
+                <th width="250" scope="col">
+                  Result
+                </th>
+                <th width="250" scope="col">
+                  Difference
+                </th>
+              </tr>
+            </thead>
+            <tbody>{salesEntryElements}</tbody>
+          </table>
+        </div>
 
         <div className="btn-group d-flex" role="group" aria-label="Operations">
           <ViewPerformanceButton
