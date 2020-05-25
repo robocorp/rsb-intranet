@@ -12,8 +12,8 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
   if (salesEntries.length > 0) {
     salesEntryElements = salesEntries.map(salesEntry => {
       return (
-        <>
-          <tr key={salesEntry.lastName}>
+        <React.Fragment key={salesEntry.lastName}>
+          <tr>
             <td>
               {salesEntry.firstName} {salesEntry.lastName}
             </td>
@@ -24,7 +24,7 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
             </td>
           </tr>
           {showPerformance && <Performance salesEntry={salesEntry} />}
-        </>
+        </React.Fragment>
       )
     })
 
