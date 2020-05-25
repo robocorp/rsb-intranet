@@ -36,10 +36,6 @@ footer {
   padding: 5px;
 }
 
-#logout {
-  float: right;
-}
-
 .error {
   text-align: center;
 }
@@ -88,4 +84,20 @@ table {
 .sales-summary span {
   flex: auto;
   width: 50%;
+}
+
+.logout {
+  align-items: center;
+  display: flex;
+  float: right;
+}
+
+.logout span {
+  flex: 1;
+  padding: 0 0.9em 0 0;
+  white-space: nowrap;
+}
+
+.username {
+  font-weight: bold;
 }

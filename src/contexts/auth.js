@@ -4,7 +4,8 @@ import destabilize from '../utils/destabilize'
 
 const rsbUserKey = 'rsbUser'
 
-const getUserFromLocalStorage = () => window.localStorage.getItem(rsbUserKey)
+const getUserFromLocalStorage = () =>
+  JSON.parse(window.localStorage.getItem(rsbUserKey))
 
 const getUser = (username, password) => {
   return destabilize().then(() => {
