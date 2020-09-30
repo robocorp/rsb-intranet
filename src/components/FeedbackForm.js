@@ -13,6 +13,8 @@ const FeedbackForm = () => {
   const handleSubmit = async event => {
     event.preventDefault()
 
+    setError(undefined)
+    setSuccess(undefined)
     setSending(true)
 
     const body = {
@@ -35,9 +37,9 @@ const FeedbackForm = () => {
       if (result.error) {
         setError(result.error)
       } else {
-        setSuccess('Message sent sucesfully!')
         setName('')
         setMessage('')
+        setSuccess('Message sent sucesfully!')
       }
     } catch (error) {
       setSending(false)
@@ -61,7 +63,11 @@ const FeedbackForm = () => {
                     name="name"
                     required
                     value={name}
-                    onChange={e => setName(e.currentTarget.value)}
+                    onChange={e => {
+                      setError(undefined)
+                      setSuccess(undefined)
+                      setName(e.currentTarget.value)
+                    }}
                     className="form-control"
                   />
                 </div>
@@ -72,7 +78,11 @@ const FeedbackForm = () => {
                     name="message"
                     required
                     value={message}
-                    onChange={e => setMessage(e.currentTarget.value)}
+                    onChange={e => {
+                      setError(undefined)
+                      setSuccess(undefined)
+                      setMessage(e.currentTarget.value)
+                    }}
                     className="form-control"
                   />
                 </div>
