@@ -69,6 +69,10 @@ table {
   background-size: 500px;
   color: black;
   margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+.header-container.auth {
   padding-bottom: 0px;
 }
 
@@ -114,6 +118,7 @@ table {
 }
 
 .nav-pills .nav-link {
+  margin-top: 24px;
   background: #fff;
   color: #7850fa;
   margin-right: 12px;
