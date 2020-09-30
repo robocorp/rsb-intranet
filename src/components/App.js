@@ -28,12 +28,6 @@ function Home() {
   return user ? <Intranet /> : <Login />
 }
 
-function Feedback() {
-  const {user} = useAuthState()
-  setDestabilize()
-  return user ? <FeedbackForm /> : <Login />
-}
-
 function App() {
   return (
     <AuthProvider>
@@ -42,7 +36,7 @@ function App() {
         <div className="container main-container">
           <Switch>
             <Route path="/feedback">
-              <Feedback />
+              <FeedbackForm />
             </Route>
             <Route path="/">
               <Home />

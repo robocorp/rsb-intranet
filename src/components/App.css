@@ -69,10 +69,6 @@ table {
   background-size: 500px;
   color: black;
   margin-bottom: 2em;
-  padding-bottom: 2em;
-}
-
-.header-container.auth {
   padding-bottom: 0px;
 }
 

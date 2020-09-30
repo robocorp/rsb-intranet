@@ -4,7 +4,7 @@ import {useAuthState} from '../contexts/auth'
 
 const FeedbackForm = () => {
   const {user} = useAuthState()
-  const [name, setName] = useState(user.username)
+  const [name, setName] = useState(user?.username || '')
   const [message, setMessage] = useState('')
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(undefined)
