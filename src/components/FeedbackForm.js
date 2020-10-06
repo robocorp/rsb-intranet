@@ -44,6 +44,7 @@ const FeedbackForm = () => {
         setSuccess('Message sent successfully!')
       }
     } catch (error) {
+      console.log(error)
       if (event) {
         // Retry the API call if first time fails
         handleSubmit()
