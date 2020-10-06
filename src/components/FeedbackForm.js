@@ -11,7 +11,9 @@ const FeedbackForm = () => {
   const [success, setSuccess] = useState(undefined)
 
   const handleSubmit = async event => {
-    event.preventDefault()
+    if (event) {
+      event.preventDefault()
+    }
 
     setError(undefined)
     setSuccess(undefined)
@@ -42,8 +44,13 @@ const FeedbackForm = () => {
         setSuccess('Message sent successfully!')
       }
     } catch (error) {
-      setSending(false)
-      setError('Internal error')
+      if (event) {
+        // Retry the API call if first time fails
+        handleSubmit()
+      } else {
+        setSending(false)
+        setError('Internal error')
+      }
     }
   }
 
