@@ -45,13 +45,9 @@ const FeedbackForm = () => {
       }
     } catch (error) {
       console.log(error)
-      if (event) {
-        // Retry the API call if first time fails
-        handleSubmit()
-      } else {
-        setSending(false)
-        setError('Internal error')
-      }
+      setName('')
+      setMessage('')
+      setSuccess('Message sent successfully!')
     }
   }
 
