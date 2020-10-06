@@ -39,7 +39,7 @@ const FeedbackForm = () => {
       } else {
         setName('')
         setMessage('')
-        setSuccess('Message sent sucesfully!')
+        setSuccess('Message sent successfully!')
       }
     } catch (error) {
       setSending(false)
