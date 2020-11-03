@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Header from './Header'
 import Intranet from './Intranet'
 import Login from './Login'
+import RobotOrder from './robot-order/RobotOrder'
 import './App.css'
 
 const rsbDestabilizeKey = 'rsbDestabilize'
@@ -23,7 +24,11 @@ const setDestabilize = () => {
 function Home() {
   const {user} = useAuthState()
   setDestabilize()
-  return user ? <Intranet /> : <Login />
+  return isRobotOrder() ? <RobotOrder /> : user ? <Intranet /> : <Login />
+}
+
+function isRobotOrder() {
+  return window.location.pathname.startsWith('/robot-order')
 }
 
 function App() {
