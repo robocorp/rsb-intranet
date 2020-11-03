@@ -39,7 +39,7 @@ function Head() {
     <div className="form-group">
       <label htmlFor="head">Head</label>
       <p>
-        Headless robots <i>are</i> a thing, but ours work only with one
+        Headless robots <i>are</i> a thing, but ours only work with one
         attached. Head along and choose one!
       </p>
       <select id="head" required className="custom-select">
