@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
+import ModelTable from './ModelTable'
 import RobotPreview from './RobotPreview'
+import parts from './parts'
 
 const getDynamicId = () => Date.now().toString()
 
@@ -31,12 +33,14 @@ function RobotOrderForm() {
             <Head />
             <Body />
             <Legs dynamicId={dynamicId} />
+            <Address />
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </form>
         </div>
         <div className="col-sm">
+          <ModelTable parts={parts} />
           <RobotPreview head={head} body={body} legs={legs} />
         </div>
       </div>
@@ -45,11 +49,17 @@ function RobotOrderForm() {
 }
 
 function Head() {
-  const options = ['', 1, 2, 3, 4, 5, 6].map(number => (
-    <option value={number} key={number}>
-      {number}
+  const options = parts.map(part => (
+    <option value={part.number} key={part.number}>
+      {`${part.name} head`}
     </option>
   ))
+
+  options.unshift(
+    <option value="" key="0">
+      -- Choose a head --
+    </option>,
+  )
 
   return (
     <div className="form-group">
@@ -65,17 +75,17 @@ function Head() {
 }
 
 function Body() {
-  const options = [1, 2, 3, 4, 5, 6].map(number => (
-    <div className="form-check form-check-inline" key={number}>
+  const options = parts.map(part => (
+    <div className="form-check" key={part.number}>
       <input
         className="form-check-input"
         type="radio"
-        value={number}
+        value={part.number}
         name="body"
         required
       />
-      <label className="form-check-label" htmlFor={number}>
-        {number}
+      <label className="form-check-label" htmlFor={part.number}>
+        {`${part.name} body`}
       </label>
     </div>
   ))
@@ -98,6 +108,7 @@ function Legs({dynamicId}) {
         A robot crawling legless on the factory floor is a thing for nightmares.
         Leg it up!
       </p>
+
       <input
         className="form-control"
         type="number"
@@ -105,7 +116,25 @@ function Legs({dynamicId}) {
         max="6"
         id={dynamicId}
         name={dynamicId}
-        placeholder="Enter a number for the legs"
+        placeholder="Enter the part number for the legs"
+        required
+      />
+    </div>
+  )
+}
+
+function Address() {
+  return (
+    <div className="form-group">
+      <p className="form-text text-muted">
+        Where do you want your robot shipped?
+      </p>
+      <input
+        className="form-control"
+        type="text"
+        id="address"
+        name="address"
+        placeholder="Shipping address"
         required
       />
     </div>
