@@ -36,7 +36,7 @@ function RobotOrderForm() {
 }
 
 function Head() {
-  const options = ['Choose a head', 1, 2, 3, 4, 5, 6].map(number => (
+  const options = ['', 1, 2, 3, 4, 5, 6].map(number => (
     <option value={number} key={number}>
       {number}
     </option>
@@ -44,7 +44,7 @@ function Head() {
 
   return (
     <div className="form-group">
-      <p>
+      <p class="form-text text-muted">
         Headless robots <i>are</i> a thing, but ours only work with one
         attached. Head along and choose one!
       </p>
@@ -63,6 +63,7 @@ function Body() {
         type="radio"
         value={number}
         name="body"
+        required
       />
       <label className="form-check-label" htmlFor={number}>
         {number}
@@ -72,7 +73,7 @@ function Body() {
 
   return (
     <div className="form-group">
-      <p>
+      <p class="form-text text-muted">
         Requests can be submitted without a body, but not in our store. Pick up
         a body!
       </p>
@@ -82,21 +83,20 @@ function Body() {
 }
 
 function Legs() {
-  const options = ['Choose legs', 1, 2, 3, 4, 5, 6].map(number => (
-    <option value={number} key={number}>
-      {number}
-    </option>
-  ))
-
   return (
     <div className="form-group">
-      <p>
+      <p class="form-text text-muted">
         A robot crawling legless on the factory floor is a thing for nightmares.
         Leg it up!
       </p>
-      <select id="legs" name="legs" required className="custom-select">
-        {options}
-      </select>
+      <input
+        className="form-control"
+        type="number"
+        id="legs"
+        name="legs"
+        placeholder="Enter a number for the legs"
+        required
+      />
     </div>
   )
 }
