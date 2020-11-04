@@ -92,6 +92,8 @@ function Legs() {
       <input
         className="form-control"
         type="number"
+        min="1"
+        max="6"
         id="legs"
         name="legs"
         placeholder="Enter a number for the legs"
