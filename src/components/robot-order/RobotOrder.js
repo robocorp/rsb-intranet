@@ -1,4 +1,5 @@
 import React from 'react'
+import AnnoyingNotice from './AnnoyingNotice'
 import RobotOrderForm from './RobotOrderForm'
 
 function RobotOrder() {
@@ -8,6 +9,7 @@ function RobotOrder() {
         <h2>Build your robot!</h2>
         <RobotOrderForm />
       </div>
+      <AnnoyingNotice />
     </>
   )
 }

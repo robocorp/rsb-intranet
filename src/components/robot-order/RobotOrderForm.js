@@ -49,7 +49,7 @@ function Head() {
 
   return (
     <div className="form-group">
-      <p class="form-text text-muted">
+      <p className="form-text text-muted">
         Headless robots <i>are</i> a thing, but ours only work with one
         attached. Head along and choose one!
       </p>
@@ -78,7 +78,7 @@ function Body() {
 
   return (
     <div className="form-group">
-      <p class="form-text text-muted">
+      <p className="form-text text-muted">
         Requests can be submitted without a body, but not in our store. Pick up
         a body!
       </p>
@@ -90,7 +90,7 @@ function Body() {
 function Legs() {
   return (
     <div className="form-group">
-      <p class="form-text text-muted">
+      <p className="form-text text-muted">
         A robot crawling legless on the factory floor is a thing for nightmares.
         Leg it up!
       </p>
