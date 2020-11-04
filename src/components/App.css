@@ -111,3 +111,20 @@ table {
 .username {
   font-weight: bold;
 }
+
+#robot-preview {
+  width: 380px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#robot-preview-image {
+  border: 3px solid #7850fa;
+  background: #eee;
+  padding: 15px 10px;
+}
+
+#robot-preview-image img {
+  width: 100%;
+  height: auto;
+}
