@@ -1,6 +1,5 @@
 import React from 'react'
 import RobotOrderForm from './RobotOrderForm'
-import RobotPreview from './RobotPreview'
 
 function RobotOrder() {
   return (
@@ -12,14 +11,7 @@ function RobotOrder() {
           robot, and we ship it to you as an easy-to-assemble package delivered
           straight to your front door!
         </p>
-        <div className="row">
-          <div className="col-sm">
-            <RobotOrderForm />
-          </div>
-          <div className="col-sm">
-            <RobotPreview />
-          </div>
-        </div>
+        <RobotOrderForm />
       </div>
     </>
   )

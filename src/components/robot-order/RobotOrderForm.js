@@ -1,29 +1,36 @@
-import React from 'react'
-import body1 from './bodies/1.png'
-import body2 from './bodies/2.png'
-import body3 from './bodies/3.png'
-import body4 from './bodies/4.png'
-import body5 from './bodies/5.png'
-import body6 from './bodies/6.png'
-import head1 from './heads/1.png'
-import head2 from './heads/2.png'
-import head3 from './heads/3.png'
-import head4 from './heads/4.png'
-import head5 from './heads/5.png'
-import head6 from './heads/6.png'
-import legs1 from './legs/1.png'
-import legs2 from './legs/2.png'
-import legs3 from './legs/3.png'
-import legs4 from './legs/4.png'
-import legs5 from './legs/5.png'
-import legs6 from './legs/6.png'
+import React, {useState} from 'react'
+import RobotPreview from './RobotPreview'
 
 function RobotOrderForm() {
+  const [head, setHead] = useState('')
+  const [body, setBody] = useState('')
+  const [legs, setLegs] = useState('')
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+    setHead(formData.get('head'))
+    setBody(formData.get('body'))
+    setLegs(formData.get('legs'))
+  }
+
   return (
     <>
-      <Head />
-      <Body />
-      <Legs />
+      <div className="row">
+        <div className="col-sm">
+          <form onSubmit={handleSubmit}>
+            <Head />
+            <Body />
+            <Legs />
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="col-sm">
+          <RobotPreview head={head} body={body} legs={legs} />
+        </div>
+      </div>
     </>
   )
 }
@@ -37,12 +44,11 @@ function Head() {
 
   return (
     <div className="form-group">
-      <label htmlFor="head">Head</label>
       <p>
         Headless robots <i>are</i> a thing, but ours only work with one
         attached. Head along and choose one!
       </p>
-      <select id="head" required className="custom-select">
+      <select id="head" name="head" required className="custom-select">
         {options}
       </select>
     </div>
@@ -58,12 +64,11 @@ function Body() {
 
   return (
     <div className="form-group">
-      <label htmlFor="body">Body</label>
       <p>
         Requests can be submitted without a body, but not in our store. Pick up
         a body!
       </p>
-      <select id="body" required className="custom-select">
+      <select id="body" name="body" required className="custom-select">
         {options}
       </select>
     </div>
@@ -79,12 +84,11 @@ function Legs() {
 
   return (
     <div className="form-group">
-      <label htmlFor="legs">Legs</label>
       <p>
         A robot crawling legless on the factory floor is a thing for nightmares.
         Leg it up!
       </p>
-      <select id="legs" required className="custom-select">
+      <select id="legs" name="legs" required className="custom-select">
         {options}
       </select>
     </div>
