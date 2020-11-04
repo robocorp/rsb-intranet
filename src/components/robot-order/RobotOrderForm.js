@@ -1,17 +1,21 @@
 import React, {useState} from 'react'
 import RobotPreview from './RobotPreview'
 
+const getDynamicId = () => Date.now().toString()
+
 function RobotOrderForm() {
   const [head, setHead] = useState('')
   const [body, setBody] = useState('')
   const [legs, setLegs] = useState('')
+  const [dynamicId, setDynamicId] = useState(getDynamicId())
 
   const handleSubmit = e => {
     e.preventDefault()
     const formData = new FormData(e.target)
     setHead(formData.get('head'))
     setBody(formData.get('body'))
-    setLegs(formData.get('legs'))
+    setLegs(formData.get(dynamicId))
+    setDynamicId(getDynamicId())
   }
 
   return (
@@ -26,7 +30,7 @@ function RobotOrderForm() {
           <form onSubmit={handleSubmit}>
             <Head />
             <Body />
-            <Legs />
+            <Legs dynamicId={dynamicId} />
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
@@ -87,7 +91,7 @@ function Body() {
   )
 }
 
-function Legs() {
+function Legs({dynamicId}) {
   return (
     <div className="form-group">
       <p className="form-text text-muted">
@@ -99,8 +103,8 @@ function Legs() {
         type="number"
         min="1"
         max="6"
-        id="legs"
-        name="legs"
+        id={dynamicId}
+        name={dynamicId}
         placeholder="Enter a number for the legs"
         required
       />
