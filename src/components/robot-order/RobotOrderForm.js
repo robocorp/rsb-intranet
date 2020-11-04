@@ -1,27 +1,40 @@
 import React, {useState} from 'react'
 import ModelTable from './ModelTable'
+import RandomError from './RandomError'
 import RobotPreview from './RobotPreview'
 import parts from './parts'
 
 const getDynamicId = () => Date.now().toString()
+const randomError = () => Math.random() >= 0.5
 
 function RobotOrderForm() {
   const [head, setHead] = useState('')
   const [body, setBody] = useState('')
   const [legs, setLegs] = useState('')
   const [dynamicId, setDynamicId] = useState(getDynamicId())
+  const [error, setError] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault()
-    const formData = new FormData(e.target)
-    setHead(formData.get('head'))
-    setBody(formData.get('body'))
-    setLegs(formData.get(dynamicId))
-    setDynamicId(getDynamicId())
+    setHead('')
+    setBody('')
+    setLegs('')
+
+    if (randomError()) {
+      setError(true)
+    } else {
+      const formData = new FormData(e.target)
+      setHead(formData.get('head'))
+      setBody(formData.get('body'))
+      setLegs(formData.get(dynamicId))
+      setDynamicId(getDynamicId())
+      setError(false)
+    }
   }
 
   return (
     <>
+      {error && <RandomError />}
       <div className="row">
         <div className="col-sm">
           <p>
