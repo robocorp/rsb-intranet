@@ -57,14 +57,16 @@ function Head() {
 
 function Body() {
   const options = [1, 2, 3, 4, 5, 6].map(number => (
-    <div className="form-check" key={number}>
+    <div className="form-check form-check-inline" key={number}>
       <input
         className="form-check-input"
         type="radio"
         value={number}
         name="body"
       />
-      <label htmlFor={number}>{number}</label>
+      <label className="form-check-label" htmlFor={number}>
+        {number}
+      </label>
     </div>
   ))
 
