@@ -56,10 +56,16 @@ function Head() {
 }
 
 function Body() {
-  const options = ['Choose a body', 1, 2, 3, 4, 5, 6].map(number => (
-    <option value={number} key={number}>
-      {number}
-    </option>
+  const options = [1, 2, 3, 4, 5, 6].map(number => (
+    <div className="form-check" key={number}>
+      <input
+        className="form-check-input"
+        type="radio"
+        value={number}
+        name="body"
+      />
+      <label htmlFor={number}>{number}</label>
+    </div>
   ))
 
   return (
@@ -68,9 +74,7 @@ function Body() {
         Requests can be submitted without a body, but not in our store. Pick up
         a body!
       </p>
-      <select id="body" name="body" required className="custom-select">
-        {options}
-      </select>
+      {options}
     </div>
   )
 }
