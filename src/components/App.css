@@ -157,3 +157,27 @@ button#order {
 .attribution {
   font-size: 9px;
 }
+
+.radio label,
+.radio {
+  cursor: pointer;
+}
+
+.stacked {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stacked .radio {
+  flex: 1 0 33%;
+  margin: 0 5px;
+}
+
+.text-muted {
+  font-size: 12px;
+}
+
+.form-control label {
+  font-size: 13px;
+  margin-bottom: 0.3rem;
+}

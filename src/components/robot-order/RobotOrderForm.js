@@ -57,7 +57,7 @@ function RobotOrderForm() {
   return (
     <>
       <div className="row">
-        <div className="col-sm">
+        <div className="col-sm-7">
           {error && <RandomError />}
           <p>
             Everyone needs a robot, but all needs are unique. Build your own
@@ -83,7 +83,7 @@ function RobotOrderForm() {
             </form>
           )}
         </div>
-        <div className="col-sm">
+        <div className="col-sm-5">
           {!completed && <ModelTable parts={parts} />}
           <RobotPreview head={head} body={body} legs={legs} />
         </div>

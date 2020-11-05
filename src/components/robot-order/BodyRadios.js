@@ -17,12 +17,13 @@ function BodyRadios({parts}) {
 
   return (
     <div className="form-group">
-      <label htmlFor="body">Body:</label>
+      <label htmlFor="body">2. Body:</label>
       <p className="form-text text-muted">
         Requests can be submitted without a body, but not in our store. Pick up
         a body!
       </p>
-      {options}
+
+      <div className="stacked">{options}</div>
     </div>
   )
 }
