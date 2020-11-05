@@ -2,6 +2,10 @@ function LegsInput({dynamicId}) {
   return (
     <div className="form-group">
       <label htmlFor={dynamicId}>Legs:</label>
+      <p className="form-text text-muted">
+        A robot crawling legless on the factory floor is a thing for nightmares.
+        Leg it up!
+      </p>
       <input
         className="form-control"
         type="number"
