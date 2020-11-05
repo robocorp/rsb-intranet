@@ -16,20 +16,36 @@ function AnnoyingNotice() {
           <div className="modal-header">
             <div className="modal-body">
               <p>
-                I give up all my constitutional rights for the benefit of
-                RobotSpareBin Industries Inc.
+                By using this order form, I give up all my constitutional rights
+                for the benefit of RobotSpareBin Industries Inc.
               </p>
-              <div>
-                <span className="btn btn-dark" onClick={handleOnClick}>
+
+              <div className="alert-buttons">
+                <button
+                  type="button"
+                  onClick={handleOnClick}
+                  className="btn btn-dark"
+                >
                   OK
-                </span>
-                <span className="btn btn-warning" onClick={handleOnClick}>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleOnClick}
+                  className="btn btn-warning"
+                >
                   Yep
-                </span>
-                <span className="btn btn-danger" onClick={handleOnClick}>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleOnClick}
+                  className="btn btn-danger"
+                >
                   I guess so...
-                </span>
-                <span className="btn btn-success">No way!</span>
+                </button>
+                <button type="button" className="btn btn-success">
+                  No way!
+                </button>
               </div>
             </div>
           </div>

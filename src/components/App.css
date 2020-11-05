@@ -132,6 +132,9 @@ table {
 .modal {
   background-color: rgba(0, 0, 0, 80%);
 }
+.modal-header {
+  border-bottom: 0;
+}
 
 .modal-content {
   background-color: #7850fa;
@@ -141,4 +144,12 @@ table {
 .modal-dialog {
   color: #fff;
   text-transform: uppercase;
+}
+
+.alert-buttons button {
+  margin-right: 5px;
+}
+
+button#order {
+  margin-left: 10px;
 }
