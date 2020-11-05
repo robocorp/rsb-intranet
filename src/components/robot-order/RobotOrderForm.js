@@ -61,7 +61,9 @@ function RobotOrderForm() {
             robot, and we ship it to you as an easy-to-assemble package
             delivered straight to your front door!
           </p>
-          {!error && completed && <OrderCompletion />}
+          {!error && completed && (
+            <OrderCompletion head={head} body={body} legs={legs} />
+          )}
           {!completed && (
             <form onSubmit={handleSubmit}>
               <HeadSelect parts={parts} />
