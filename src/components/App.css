@@ -129,6 +129,10 @@ table {
   height: auto;
 }
 
+.modal {
+  background-color: rgba(0, 0, 0, 80%);
+}
+
 .modal-content {
   background-color: #7850fa;
   border-color: #7850fa;
