@@ -1,12 +1,13 @@
 import React from 'react'
 
-function OrderCompletion({head, body, legs}) {
+function OrderCompletion({head, body, legs, address}) {
   return (
     <div id="order-completion">
       <div id="receipt" className="alert alert-success" role="alert">
         <h3>Receipt</h3>
         <OrderTime />
         <OrderId />
+        <p>{address}</p>
         <Parts head={head} body={body} legs={legs} />
         <p>
           Thank you for your order! We will ship your robot to you as soon as

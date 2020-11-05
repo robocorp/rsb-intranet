@@ -19,6 +19,7 @@ function RobotOrderForm() {
   const [head, setHead] = useState('')
   const [body, setBody] = useState('')
   const [legs, setLegs] = useState('')
+  const [address, setAddress] = useState('')
   const [dynamicId, setDynamicId] = useState(getDynamicId())
   const [error, setError] = useState(false)
   const [completed, setCompleted] = useState(false)
@@ -33,11 +34,13 @@ function RobotOrderForm() {
     setHead('')
     setBody('')
     setLegs('')
+    setAddress('')
 
     const formData = new FormData(e.target)
     setHead(formData.get('head'))
     setBody(formData.get('body'))
     setLegs(formData.get(dynamicId))
+    setAddress(formData.get('address'))
     setDynamicId(getDynamicId())
     setError(false)
   }
@@ -62,7 +65,12 @@ function RobotOrderForm() {
             delivered straight to your front door!
           </p>
           {!error && completed && (
-            <OrderCompletion head={head} body={body} legs={legs} />
+            <OrderCompletion
+              head={head}
+              body={body}
+              legs={legs}
+              address={address}
+            />
           )}
           {!completed && (
             <form onSubmit={handleSubmit}>
