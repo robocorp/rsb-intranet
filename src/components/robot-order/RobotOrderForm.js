@@ -34,9 +34,9 @@ function RobotOrderForm() {
 
   return (
     <>
-      {error && <RandomError />}
       <div className="row">
         <div className="col-sm">
+          {error && <RandomError />}
           <p>
             Everyone needs a robot, but all needs are unique. Build your own
             robot, and we ship it to you as an easy-to-assemble package
