@@ -153,3 +153,7 @@ table {
 button#order {
   margin-left: 10px;
 }
+
+.attribution {
+  font-size: 9px;
+}

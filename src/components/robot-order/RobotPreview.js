@@ -11,6 +11,12 @@ function RobotPreview({head, body, legs}) {
             {body && <img src={`/bodies/${body}.png`} alt="Body"></img>}
             {legs && <img src={`/legs/${legs}.png`} alt="Legs"></img>}
           </div>
+          <a
+            className="attribution"
+            href="https://www.vecteezy.com/free-vector/robotics"
+          >
+            Robotics Vectors by Vecteezy
+          </a>
         </>
       )}
     </div>
