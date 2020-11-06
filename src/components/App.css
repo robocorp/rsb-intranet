@@ -69,6 +69,7 @@ table {
   background-size: 500px;
   color: black;
   margin-bottom: 2em;
+  padding-bottom: 0px;
 }
 
 .btn-primary {
@@ -110,4 +111,86 @@ table {
 
 .username {
   font-weight: bold;
+}
+
+#robot-preview {
+  width: 380px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#robot-preview-image {
+  border: 3px solid #7850fa;
+  background: #eee;
+  padding: 15px 10px;
+}
+
+#robot-preview-image img {
+  width: 100%;
+  height: auto;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 80%);
+}
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-content {
+  background-color: #7850fa;
+  border-color: #7850fa;
+}
+
+.modal-dialog {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.alert-buttons button {
+  margin-right: 5px;
+}
+
+button#order {
+  margin-left: 10px;
+}
+
+.attribution {
+  font-size: 9px;
+}
+
+.radio label,
+.radio {
+  cursor: pointer;
+}
+
+.stacked {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stacked .radio {
+  flex: 1 0 33%;
+  margin: 0 5px;
+}
+
+.text-muted {
+  font-size: 12px;
+}
+
+.form-control label {
+  font-size: 13px;
+  margin-bottom: 0.3rem;
+}
+
+.nav-pills .nav-link {
+  margin-top: 24px;
+  background: #fff;
+  color: #7850fa;
+  margin-right: 12px;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-pills .nav-link.active {
+  background: #7850fa;
 }
