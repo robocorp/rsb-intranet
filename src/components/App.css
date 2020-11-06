@@ -69,6 +69,7 @@ table {
   background-size: 500px;
   color: black;
   margin-bottom: 2em;
+  padding-bottom: 0px;
 }
 
 .btn-primary {
@@ -180,4 +181,16 @@ button#order {
 .form-control label {
   font-size: 13px;
   margin-bottom: 0.3rem;
+}
+
+.nav-pills .nav-link {
+  margin-top: 24px;
+  background: #fff;
+  color: #7850fa;
+  margin-right: 12px;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-pills .nav-link.active {
+  background: #7850fa;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {AuthProvider, useAuthState} from '../contexts/auth'
 import Footer from './Footer'
 import Header from './Header'
@@ -24,21 +25,26 @@ const setDestabilize = () => {
 function Home() {
   const {user} = useAuthState()
   setDestabilize()
-  return isRobotOrder() ? <RobotOrder /> : user ? <Intranet /> : <Login />
-}
-
-function isRobotOrder() {
-  return window.location.pathname.startsWith('/robot-order')
+  return user ? <Intranet /> : <Login />
 }
 
 function App() {
   return (
     <AuthProvider>
-      <Header />
-      <div className="container main-container">
-        <Home />
-      </div>
-      <Footer />
+      <Router>
+        <Header />
+        <div className="container main-container">
+          <Switch>
+            <Route path="/robot-order">
+              <RobotOrder />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
+      </Router>
     </AuthProvider>
   )
 }
