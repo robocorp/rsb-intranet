@@ -46,7 +46,7 @@ function OrderAnotherButton() {
       id="order-another"
       type="submit"
       className="btn btn-primary"
-      onClick={() => window.location.replace('/robot-order')}
+      onClick={() => window.location.reload()}
     >
       Order another robot
     </button>
