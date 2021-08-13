@@ -35,16 +35,16 @@ function SalesEntries({salesEntries, onDeleteAllSalesEntries}) {
           <table className="table table-dark table-striped">
             <thead>
               <tr>
-                <th width="250" scope="col">
+                <th width="24%" scope="col">
                   Name
                 </th>
-                <th width="250" scope="col">
+                <th width="24%" scope="col">
                   Target
                 </th>
-                <th width="250" scope="col">
+                <th width="24%" scope="col">
                   Result
                 </th>
-                <th width="250" scope="col">
+                <th width="24%" scope="col">
                   Difference
                 </th>
               </tr>
