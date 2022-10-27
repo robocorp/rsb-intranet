@@ -1,22 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Armata&display=swap');
 
-body {
-  padding: 0;
-  font-family: 'Armata', sans-serif;
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Lobster', cursive;
 }
 
 h1 {
   font-size: 35px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Special Elite', cursive;
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Armata;
+  color: #807777;
 }
 
 header {
@@ -29,10 +26,7 @@ footer {
   font-size: 0.8em;
   background-color: #eae8e4;
   border-top: 5px solid #7850fa;
-  background-image: url(../imgs/robots-background.png);
-  background-size: 500px;
-  margin: 2em 0 1em 0;
-  margin-bottom: 0;
+  margin: 2em 0 0 0;
   padding: 5px;
 }
 
@@ -42,7 +36,6 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: -1000;
   }
 }
 
@@ -65,8 +58,6 @@ table {
 .header-container {
   background-color: #eae8e4;
   border-bottom: 10px solid #7850fa;
-  background-image: url(../imgs/robots-background.png);
-  background-size: 500px;
   color: black;
   margin-bottom: 2em;
   padding-bottom: 0px;
