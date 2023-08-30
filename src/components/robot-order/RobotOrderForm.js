@@ -27,15 +27,13 @@ function RobotOrderForm() {
   const handleSubmit = e => {
     e.preventDefault()
     const action = e.nativeEvent.submitter.id
-    action === 'preview' ? handlePreview(e) : handleOrder(e)
+    handlePreview(e)
+    if (action === 'order') {
+      handleOrder(e)
+    }
   }
 
   const handlePreview = e => {
-    setHead('')
-    setBody('')
-    setLegs('')
-    setAddress('')
-
     const formData = new FormData(e.target)
     setHead(formData.get('head'))
     setBody(formData.get('body'))
