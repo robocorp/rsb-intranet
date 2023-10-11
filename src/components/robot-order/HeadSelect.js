@@ -12,7 +12,7 @@ function HeadSelect({parts}) {
   )
 
   return (
-    <div className="form-group">
+    <div className="mb-3">
       <label htmlFor="head">1. Head:</label>
       <p className="form-text text-muted">
         Headless robots <i>are</i> a thing, but ours only work with one

@@ -16,12 +16,8 @@ function SalesForm() {
   )
 
   const handleSubmit = event => {
-    const {
-      firstname,
-      lastname,
-      salestarget,
-      salesresult,
-    } = event.target.elements
+    const {firstname, lastname, salestarget, salesresult} =
+      event.target.elements
 
     salesEntries.unshift({
       firstName: firstname.value,
@@ -50,7 +46,7 @@ function SalesForm() {
       <div className="row">
         <div className="col-sm">
           <form id="sales-form" onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="mb-3">
               <label htmlFor="firstname">First name</label>
               <input
                 type="text"
@@ -60,7 +56,7 @@ function SalesForm() {
                 className="form-control"
               />
             </div>
-            <div className="form-group">
+            <div className="mb-3">
               <label htmlFor="lastname">Last name</label>
               <input
                 type="text"
@@ -71,7 +67,7 @@ function SalesForm() {
               />
             </div>
             <SalesTargetSelect />
-            <div className="form-group">
+            <div className="mb-3">
               <label htmlFor="salesresult">Sales result ($)</label>
               <input
                 type="number"
@@ -111,7 +107,7 @@ function SalesTargetSelect() {
   }
 
   return (
-    <div className="form-group">
+    <div className="mb-3">
       <label htmlFor="salestarget">Sales target ($)</label>
       <select id="salestarget" required className="custom-select">
         {options}

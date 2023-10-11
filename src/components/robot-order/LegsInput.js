@@ -1,6 +1,6 @@
 function LegsInput({dynamicId}) {
   return (
-    <div className="form-group">
+    <div className="mb-3">
       <label htmlFor={dynamicId}>3. Legs:</label>
       <p className="form-text text-muted">
         A robot crawling legless on the factory floor is a thing for nightmares.

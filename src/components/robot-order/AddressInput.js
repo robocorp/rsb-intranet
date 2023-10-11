@@ -1,6 +1,6 @@
 function AddressInput() {
   return (
-    <div className="form-group">
+    <div className="mb-3">
       <p className="form-text text-muted">
         Where do you want your robot shipped?
       </p>

@@ -34,7 +34,7 @@ function ModelTable({parts}) {
   })
 
   return (
-    <div className="form-group">
+    <div className="mb-3">
       <ToggleButton show={show} handleOnClick={handleOnClick} />
       {show && (
         <table id="model-info" className="table table-dark">

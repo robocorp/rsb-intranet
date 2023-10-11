@@ -17,7 +17,7 @@ function Login() {
       <div className="row">
         <div className="col-sm">
           <form onSubmit={event => handleSubmit(event, login)}>
-            <div className="form-group">
+            <div className="mb-3">
               <label htmlFor="username">Username</label>
               <input
                 type="text"
@@ -27,7 +27,7 @@ function Login() {
                 className="form-control"
               />
             </div>
-            <div className="form-group">
+            <div className="mb-3">
               <label htmlFor="password">Password</label>
               <input
                 type="password"

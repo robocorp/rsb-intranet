@@ -16,7 +16,7 @@ function BodyRadios({parts}) {
   ))
 
   return (
-    <div className="form-group">
+    <div className="mb-3">
       <label htmlFor="body">2. Body:</label>
       <p className="form-text text-muted">
         Requests can be submitted without a body, but not in our store. Pick up

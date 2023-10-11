@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import {AuthProvider, useAuthState} from '../contexts/auth'
 import Footer from './Footer'
 import Header from './Header'
@@ -34,14 +34,10 @@ function App() {
       <Router>
         <Header />
         <div className="container main-container">
-          <Switch>
-            <Route path="/robot-order">
-              <RobotOrder />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/robot-order" element={<RobotOrder />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </div>
         <Footer />
       </Router>
